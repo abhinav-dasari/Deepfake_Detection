@@ -1,0 +1,271 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$HrkCPe71hc8ELKsOHOmYKH$GY2dIIIiFcRWG4IZr/yHU9gab0qS3sYgzuarQHIWB5g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "abhinav.dasari",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhinavdasari02@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-26T16:58:08.910Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$aLNNVJE01FlpTa9gxZ8Puq$ljF5uMqvZCFGfgkuyDTWf9S+pIAWIhhM2NLzDen4tlE=",
+    "last_login": "2026-05-18T17:14:56.256Z",
+    "is_superuser": true,
+    "username": "abhinav",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhinavdasari02@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-26T17:05:12.953Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Pg4nGv5dBuZUj5IO4VpZ7M$7GT6NK2ibMgyjS50XDbJZycq84juW1B+4ogECs9jezU=",
+    "last_login": "2026-02-27T04:27:10.323Z",
+    "is_superuser": false,
+    "username": "abhi",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhinavdasari23@lpu.in",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-27T04:00:20.787Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2CFPh7QuCykRxjrcZ3OMrz$hsLmtn0dizfAHiiwr7+zJ6XQ2PAfS52RjH0Vhq2nm7s=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "abhi1",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhinavdasari02@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-27T08:57:24.718Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$souDxshaOuQIHgGAdM2DqY$2qt2Ag04INC8ug2xUJHZPMKcHBKoM/NKof0rg7FEcM4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "abhi2",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhinavdasari02@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-27T09:12:13.796Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$S03LDrIjPwdcCG2a3Us9wF$ux9zyG+s+LAlB1cDAl2b+Jh/ek8pzZjM+Jx0NlfEx3A=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "abhi3",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhinavdasari02@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-18T15:28:05.053Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$mQJNAaYx9vi1FY08AbYhx1$X9mNbzcpDKv+710txkmwf8KUSFH5+XSuM6/ee4Dxe8E=",
+    "last_login": "2026-05-18T15:33:45.120Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-18T15:31:13.659Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 30,
+  "fields": {
+    "user": 3,
+    "image": "uploads/blob_phVtkAo",
+    "prediction": "Fake",
+    "confidence": 0.8749581575393677,
+    "created_at": "2026-02-27T08:39:56.893Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 31,
+  "fields": {
+    "user": 2,
+    "image": "uploads/20240225_142648.jpg",
+    "prediction": "Real",
+    "confidence": 0.7388252317905426,
+    "created_at": "2026-02-27T08:44:28.907Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 32,
+  "fields": {
+    "user": 5,
+    "image": "uploads/blob_NxFh4fI",
+    "prediction": "Fake",
+    "confidence": 0.8749581575393677,
+    "created_at": "2026-02-27T09:13:04.997Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 33,
+  "fields": {
+    "user": 5,
+    "image": "uploads/20240225_142648_jAiFiya.jpg",
+    "prediction": "Real",
+    "confidence": 0.7388252317905426,
+    "created_at": "2026-02-27T09:17:41.714Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 34,
+  "fields": {
+    "user": 5,
+    "image": "uploads/blob_66WtOD0",
+    "prediction": "Fake",
+    "confidence": 0.5122122764587402,
+    "created_at": "2026-02-27T09:18:34.939Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 35,
+  "fields": {
+    "user": 6,
+    "image": "uploads/blob_YvMHXHE",
+    "prediction": "Real",
+    "confidence": 0.6357163190841675,
+    "created_at": "2026-05-18T16:12:59.546Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 36,
+  "fields": {
+    "user": 6,
+    "image": "uploads/blob_80KwPNQ",
+    "prediction": "Real",
+    "confidence": 0.6329336762428284,
+    "created_at": "2026-05-18T16:13:11.266Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 37,
+  "fields": {
+    "user": 6,
+    "image": "uploads/blob_igG9gZc",
+    "prediction": "Fake",
+    "confidence": 0.6120089292526245,
+    "created_at": "2026-05-18T16:13:22.398Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 38,
+  "fields": {
+    "user": 6,
+    "image": "uploads/blob_x3qimw0",
+    "prediction": "Fake",
+    "confidence": 0.5419302582740784,
+    "created_at": "2026-05-18T16:13:43.956Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 39,
+  "fields": {
+    "user": 6,
+    "image": "uploads/blob_y3X4saH",
+    "prediction": "Fake",
+    "confidence": 0.5419302582740784,
+    "created_at": "2026-05-18T16:13:56.346Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 40,
+  "fields": {
+    "user": 6,
+    "image": "uploads/blob_JNPqs7Y",
+    "prediction": "Real",
+    "confidence": 0.6340903043746948,
+    "created_at": "2026-05-18T16:14:02.367Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 41,
+  "fields": {
+    "user": 6,
+    "image": "uploads/blob_iFUNDB5",
+    "prediction": "Fake",
+    "confidence": 0.5419302582740784,
+    "created_at": "2026-05-18T16:17:14.863Z"
+  }
+},
+{
+  "model": "detection.detection",
+  "pk": 42,
+  "fields": {
+    "user": 6,
+    "image": "uploads/ChatGPT_Image_May_13_2026_11_19_13_AM.png",
+    "prediction": "Fake",
+    "confidence": 0.5586267113685608,
+    "created_at": "2026-05-18T17:56:28.806Z"
+  }
+}
+]

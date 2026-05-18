@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+*.sqlite3
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+
+# Docker
+mydb.sql
+python-docker-demo/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Media uploads
+Backend/deepfake_backend/media/
+
+# PDF tutorials
+*.pdf
