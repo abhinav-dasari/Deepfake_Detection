@@ -21,8 +21,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 6. Copy the entire Django project into /app
 COPY . .
 
-# 7. Expose port 8000
-EXPOSE 8000
+# 7. Collect static files at build time
+RUN python manage.py collectstatic --noinput 2>/dev/null || true
 
-# 8. Start the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# 8. Expose port (Render uses PORT env var, default 10000)
+EXPOSE 10000
+
+# 9. Start with gunicorn for production
+CMD gunicorn deepfake_backend.wsgi:application --bind 0.0.0.0:${PORT:-10000}

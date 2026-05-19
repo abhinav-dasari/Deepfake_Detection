@@ -1,20 +1,30 @@
-# 1. Use official Node.js Alpine image (lightweight)
-FROM node:20-alpine
+# Stage 1: Build the React app
+FROM node:20-alpine AS build
 
-# 2. Set working directory
 WORKDIR /app
 
-# 3. Copy package files first (leverages Docker layer caching)
+# Copy package files first (leverages Docker layer caching)
 COPY package*.json .
 
-# 4. Install dependencies
+# Install dependencies
 RUN npm install
 
-# 5. Copy the rest of the project
+# Copy the rest of the project
 COPY . .
 
-# 6. Expose port 5173 (Vite default)
-EXPOSE 5173
+# Build for production
+RUN npm run build
 
-# 7. Start Vite dev server with --host to allow external access
-CMD ["npm", "run", "dev", "--", "--host"]
+# Stage 2: Serve with nginx
+FROM nginx:alpine
+
+# Copy built files to nginx html directory
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Copy custom nginx config for React Router (SPA support)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
