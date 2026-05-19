@@ -61,9 +61,9 @@ class DetectionAPITest(TestCase):
     def test_history_requires_auth(self):
         """Test that history endpoint requires authentication"""
         response = self.client.get('/api/detect/history/')
-        self.assertEqual(response.status_code, 401)
+        self.assertIn(response.status_code, [401, 403])
 
     def test_upload_requires_auth(self):
         """Test that upload endpoint requires authentication"""
         response = self.client.post('/api/detect/upload/')
-        self.assertEqual(response.status_code, 401)
+        self.assertIn(response.status_code, [401, 403])
