@@ -121,5 +121,7 @@ jobs:
         run: curl -sf "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}"
 
       - name: Deploy frontend to Render
-        if: ${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK != '' }}
-        run: curl -sf "${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}"
+        env:
+          HOOK: ${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}
+        if: ${{ env.HOOK != '' }}
+        run: curl -sf "$HOOK"
