@@ -80,7 +80,7 @@ jobs:
         run: |
           cd Frontend
           npm run build
-
+# ── Build-Push to Render ──────────────────────────────────────
   build-push:
     runs-on: ubuntu-latest
     needs: [test-backend, test-frontend]
@@ -109,3 +109,17 @@ jobs:
           context: ./Frontend
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/deepfake-frontend:latest
+
+  # ── Deploy to Render ──────────────────────────────────────
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build-push]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy backend to Render
+        run: curl -sf "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}"
+
+      - name: Deploy frontend to Render
+        if: ${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK != '' }}
+        run: curl -sf "${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}"

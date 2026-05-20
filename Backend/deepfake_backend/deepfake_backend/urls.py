@@ -19,10 +19,19 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import JsonResponse
 
 urlpatterns = [
+    path('', lambda request: JsonResponse({'status': 'ok', 'service': 'deepfake-backend'})),
+    path('api/', lambda request: JsonResponse({
+        'endpoints': {
+            'auth': '/api/auth/',
+            'detect': '/api/detect/',
+            'admin': '/admin/',
+        }
+    })),
     path('admin/', admin.site.urls),
-    path('api/',include('rest_framework.urls')),
+    path('api/browsable/', include('rest_framework.urls')),
     path('api/auth/', include('accounts.urls')),
     path('api/detect/', include('detection.urls')),
 ]
