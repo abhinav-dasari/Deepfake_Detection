@@ -12,7 +12,11 @@ RUN npm install
 # Copy the rest of the project
 COPY . .
 
-# Build for production
+# Accept VITE_API_URL at build time (Render passes env vars as build args)
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
+# Build for production (Vite bakes VITE_API_URL into the JS bundle here)
 RUN npm run build
 
 # Stage 2: Serve with nginx
