@@ -1,4 +1,7 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+// Auto-detect backend URL: use Render backend when deployed, localhost when developing
+const API_URL = window.location.hostname.includes('onrender.com')
+    ? 'https://deepfake-backend-b5qr.onrender.com/api'
+    : (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api');
 
 const handleResponse = async (response) => {
     if (!response.ok) {
