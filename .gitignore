@@ -18,6 +18,8 @@ dist/
 
 # Docker
 mydb.sql
+*.sql
+!schema.sql
 python-docker-demo/
 
 # IDE
